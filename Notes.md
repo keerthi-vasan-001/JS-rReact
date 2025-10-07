@@ -8,3 +8,9 @@ Name changes -> Mocha(1995)->Livescript(1996)->Js(10 days)1997-> ECMA Standard e
 # Module 2
 It is a interpreted prog language that means it follows line by line execution.<br> It is dynamically typed language and weakly typed language ( eg: a=10 and we can reassign a="STR")<br>
 It is asynchronous prog language.It can be achieved by using async,wait,callback etc...
+# Oct 7 2025
+- It is a event driven prog lang(i.e clicking a button to show some actions or events )<br>
+- It is a single Page application (i.e If we perform any actions The page will not reload,it will give the content inside the page)
+- It is a object based scripting language
+# Module 3- working of Js in browser and in with HTML
+The V8 engine in chrome browser converts out code into machine language and processing and gives the result(client side), in server side(Node js)
