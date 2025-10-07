@@ -14,3 +14,86 @@ It is asynchronous prog language.It can be achieved by using async,wait,callback
 - It is a object based scripting language
 # Module 3- working of Js in browser and in with HTML
 The V8 engine in chrome browser converts out code into machine language and processing and gives the result(client side), in server side(Node js)
+- The script tag must be at the end of the body tag because it will load all the tags and to make them dynamic
+- console.log()->method shows error and output in console
+- Document.write() method directly writes the content in the HTML page
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>make dynamic</h1>
+    <script>
+      //alert("hi")
+      setTimeout(() => {
+      document.querySelector("h1").innerHTML = "Im changed";
+      },4000 )
+      document.write("Basics of Javascipt")
+    </script>
+  </body>
+</html>
+```
+# Module 4 - Intro to Prog lang and fundamentals of Js
+The prog lang is lang used to communicate with the computer.
+## Variable
+- It is a container used to store the value (a=10)
+- Three types of var declaration **let**,**var**,**const**
+- keyword var_name= value;
+```js
+let username="keerthivasan";
+var email="keerthimukesh1803@gmail.com";
+const password="1234";
+```
+# Module 5 - Keywords
+## condition based
+- if,else,switch
+## loop
+- do,while,for,function
+class - is used to create a template 
+delete - is used to delete a object
+
+## Identifier Rules
+- All js variables must be identified with unique names
+- Name must begin with a letter,can also begin with '$' and _,Names are case sensitive
+**No internal and external scripting must be linked**<br>
+Types of Casing
+- Camel case -> newEmployeeId
+- Pascal case -> NewEmployeeId
+- Under case -> New_Employee_Id
+# Module - 6 Var,Let,Const difference
+```js
+// var age=100; Declaration and initialization
+var age;// Declaration
+age=50;//Initalization or assigning
+console.log(age);
+var age=40 //Redeclaration
+age=21//Reassign or Reinitalize
+
+// let  newAge=100; Declaration and initialization
+let newAge;// Declaration
+console.log(newAge);// output -> "undefined"
+newAge=150;//Intitalize
+//let newAge=30; Redeclare is not possible
+newAge="Keerthi"; // Reassign
+
+// const name; is not possible both declaration and intialization performed together
+const named="keerthi";
+// const name="vasan";redeclare is not possible;
+//named="mukesh";// error not shown here but reassign is also not possible
+//console.log(named);
+// Printing Statements
+//alert(named)
+document.write(newAge);
+document.writeln("Vasan");
+//confirm("named");// The difference is it has two options both ok and cancel
+
+let userage=prompt("Enter your age")// This is used to take input from the user
+document.write(userage)
+console.error(123);
+console.clear();// To clear the console
+```
