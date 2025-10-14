@@ -243,3 +243,73 @@ console.log(a11===b11)//It checks both data types and equality
 - &&->both connditon true -> true
 - ||-> one condition true ->true
 - ! -> !(true) = false ,, !(false)->true
+
+# OCt 14
+# Module12- String and Template String
+```js
+let str="keerthi"
+let str1="vasan"
+console.log(str+str1) // keerthivasan
+console.log(str+str1+"is learning javascript");
+
+// Template String or Template literal (` `)->not single quotes it is backspace 
+let a1=`javascript`
+let a2=`${a1} is a scripting language`
+console.log(a2)
+let num1=5;
+let num2=2;
+console.log(`${num1} * ${num2} = ${num1*num2}`) // for evaluating expression also
+```
+# Module 13-Type Conversion
+```js
+// Implicit conversion(Auto conversion)
+str="45"
+num=100
+console.log(str+num) // it 45100 (string concat) data tyep->string
+// String 
+console.log("Hi"+true) // Hitrue
+console.log("Hi"+undefined) // Hiundefined
+console.log("Hi"+null) // Hinull
+console.log("Hi"+[1,2]) //Hi1,2
+// String + anything ===anything+string
+
+//Number
+console.log(10+true) // 11
+// true-1,false-0
+console.log(10+undefined) // Nan ->Not a Number
+console.log(10+null) // 10+0 -> 10
+console.log(10+[1,2]); // 101,2 (String)
+console.log(10+{}) // 10[object object]
+console.log(typeof(10+'')) // string 
+
+//Boolean
+console.log(10 + true) //11
+console.log(true+undefined)//Nan
+console.log(true+null) // 1+0 =1
+console.log(true+[1,2]) // true1,2 (String)
+console.log(true+{})// true[object object]
+console.log(true+'')// true
+
+//operations 
+console.log(10+'2') //102
+console.log(10-'3') //7
+console.log(10*'3') //30
+console.log(10-'abc')//NaN
+
+
+// Explicit conversion
+console.log(10+Number('10')) //20
+console.log(Number('')) //0
+console.log(Number('abc')) //NaN
+console.log(Number(undefined)) //NaN
+console.log(Number([])) //0
+console.log(Number([1,2])) //NaN
+console.log(Number({})) //Nan
+
+//Boolean
+console.log(Boolean(0)) // false
+// Boolean values of null,undefined,0," "-> false
+console.log(Boolean([]))// true
+// boolean value of other than zero is true
+```
+
