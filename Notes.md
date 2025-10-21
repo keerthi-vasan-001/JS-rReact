@@ -312,4 +312,36 @@ console.log(Boolean(0)) // false
 console.log(Boolean([]))// true
 // boolean value of other than zero is true
 ```
+# Module 14 - Control Statements
 
+## Conditional Statements
+- if ,if else, if else if else,
+
+Very basic concepts 
+
+# Module 15- If elseif else
+Basic example of is else if else (which is used for mutliple scenarios)
+
+# Module 16- switch
+Normal siwtch expression as same for all
+ Importance of break statement in switch 
+```js
+let day="mon"
+switch(day)
+{
+    case "mon":
+    case "tue":
+    case "wed":
+    case "thur":
+    case "fri": console.log("weekday");
+    break;
+    case "sat":
+    case "sun": console.log("weekend");break;
+    default: console.log("wrong input");break;
+}
+//The mutiple choice based options are classified under same switch statement
+```
+# Module 17 - Nested if else,ternary operator
+ Basic examples 
+
+# Module 18-
