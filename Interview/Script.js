@@ -1,4 +1,4 @@
-// Getting element by id
+/*// Getting element by id
 let ele =document.getElementById("message")
 ele.innerText="keerthivasan";
 ele.innerHTML='<button>keerthi</button>' // to chabge the content by giving Html input
@@ -76,3 +76,13 @@ mouseelement.addEventListener('mouseleave',function(event)
 {
     mouseelement.textContent="Mouseleave"
 })
+*/
+let num=1234
+sum=0
+while(num>0)
+{
+  let rem=(num)%10; // extracting the unit digit
+  sum+=rem;
+  num=parseInt(num/10) // reducing the unit digit,i.e dividing the number by 10
+}
+console.log(sum)

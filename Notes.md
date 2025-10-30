@@ -344,4 +344,148 @@ switch(day)
 # Module 17 - Nested if else,ternary operator
  Basic examples 
 
-# Module 18-
+# Oct 21
+# Module 18-looping Statement
+ for loop in module 18
+# Module 19- while loop
+first checks the condition and execute the statements if it is true
+```js
+let i=5
+while(i>0) // condition check
+{
+  console.log(i)// statement
+  i--; // decrement or increment opeartion 
+}
+// 5 4 3 2 1 
+
+// example  program sum of digits in a number -> 1234 ->1+2+3+4=10
+let num=1234
+sum=0
+while(num>0)
+{
+  let rem=(num)%10; // extracting the unit digit
+  sum+=rem;
+  num=parseInt(num/10) // reducing the unit digit,i.e dividing the number by 10
+}
+console.log(sum)
+```
+# Module 20 - Do while loop
+It executes the statements atleast one time if the condition is even false
+break -> used to terminate the loop 
+continue=> used to skip the iteration
+
+# Module 21 - Function 
+A js function is a block of JS code that performs a task or calcualtes a value.
+```js
+let person1={
+    name1:"John",
+    Age:40
+}
+function printusername(uname,uage){
+
+    //console.log("Hello Everyone",person1.name1,person1.Age)
+    console.log(`Hi ${uname} , age is ${uage}`)
+}
+printusername("Keerthi",12)
+printusername("Mukesh",13)
+printusername("SK",41)
+printusername("SK") // If we dont give age the value is undefined
+```
+# Module 22 - Defalut parameter and default value
+We are assigining the value for a argument when it is not initialised or the value is passed
+```js
+function printusername(uname="Johnny",uage=18){
+
+    //console.log("Hello Everyone",person1.name1,person1.Age)
+    console.log(`Hi ${uname} , age is ${uage}`)
+}
+printusername("SK") // Hi SK,age is 18
+printusername() // Hi Johnny ,age is 18
+
+// Default value for variable
+let empId="12345"
+let newId=empId || "56789"
+console.log(newId) // 12345
+// If empId is not intialised with any value  then value is 56789
+```
+
+# Oct 30
+# Module 23-Return and Non Return Type
+```js
+// Return Type
+function findRectangleArea(l,b)
+{
+    return l*b //return keyword must be the last statement in a return function
+}
+Area=findRectangleArea(10,20) // Storing the value from return function
+console.log(Area) // Printing the value
+function findCubicArea(num)
+{
+    return (num*3,"sk") // important note: If we return multiple values in return statement
+    // It will always return the last value  
+    // o/p=> sk
+}
+let val=findCubicArea(4)
+console.log(val) //sk
+
+//Non return type
+function nameprint(name)
+{
+    console.log("Non return type: ",name);
+}
+nameprint("Keerthi")
+// It does not return any value ,it will only console.log() or updating the values like void method in java
+```
+# Module 24 - Var let Const Scope difference
+```js
+// var -> function scope
+function outerfunction()
+{
+    if(true)
+    {
+        var functionvar="Im a variable"
+        console.log(functionvar)
+    }
+    console.log(functionvar) // We can also access the variable declared with var keyword within the function scope
+
+}
+outerfunction()
+
+// let,const -> blockscope 
+function blockscope()
+{
+    if(true)
+    {
+        let blockvar="I am a block scope variable"
+        const blockvar1="I am a const var"
+        console.log(blockvar) 
+        console.log(blockvar1)
+        // Within the block only the variables are acessed 
+    }
+    console.log(blockvar); // ReferenceError: blockvar is not defined
+    console.log(blockvar1); // ReferenceError: blockvar1 is not defined
+}
+blockscope()
+
+var a=10
+let b=20
+const c=30
+function accesslocalvar()
+{//the variables inside the function is local variable
+  var a=100
+ let b=200
+ const c=300
+console.log(a+b+c) 
+}
+accesslocalvar() //600
+function accessglobalvar()
+{
+    console.log(a+b+c)
+}
+accessglobalvar()// 60 ,because the function will check for the local variables and if it is not found
+// It will automatically acccess the global variables
+
+// Scope Chain : The process of accessing the variables within the block and if it is not found search by upper scope 
+```
+
+
