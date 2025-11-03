@@ -487,5 +487,146 @@ accessglobalvar()// 60 ,because the function will check for the local variables 
 
 // Scope Chain : The process of accessing the variables within the block and if it is not found search by upper scope 
 ```
+# Module 25 - Functions
+- Named function
+- Anonymous function 
+- Arrow function
+- Higher Order Function 
+- Callback function
+```js
+//Named function
+function Keerthi(){
+    console.log("Keerthivasan")
+
+}
+Keerthi()
+
+//Anonymous function
+let age=function(uage) // assigning variable name with function keyword
+{
+    console.log("Age is",uage)
+}
+age(21) // calling the function with variable name
+
+//Arrow function ()=>
+// This function is mainly for single line execution of a function
+let arrowfunc=()=> console.log("This is a arrow function")
+arrowfunc()
+//Mainly the arrow function is used for minimizing the function interms of line of code
+// pass a name to the function and return the name
+//Eg:
+let printname=uname=> uname //by arrow funciton
+storedname=printname("SK")
+console.log(storedname)
+
+//Higher Order function and Callback function
+function function1(){
+    console.log("I am higher Order function")
+}
+function function2(){
+    console.log("I am callback function")
+}
+//The function which itself passed as a parameter is callback function and the function which recieves another function is known as Higher Order Function
+function1(function2()) // o/p -> I am callback function
+                                //I am a Higher Order Function
+// Because always the parameter function is executed first
+
+//another example
+function add(callback,num1,num2){
+    console.log(num1+num2)
+    sub(65,55)
+}
+function sub(num1,num2){
+    console.log(num1-num2)
+}
+add(sub,10,20)
+```
+# Module 26- Hoisting
+Before the code execution all the declarations of variables and functions are moved to the top internally that is known as Hoisting
+- Variable declaration Hoisting
+```js
+//Internally declaration starts before execution so,var a -> for only declared variables the value is undefined
+// For var 
+console.log(a)99 // o/p->undefined
+var a=10
+console.log(a) // 10
+
+//For let 
+console.log(b) // Reference Error: cannot access 'b' before initiaization
+let b=11
+//Because the let and const variables are into temporary dead zone .so error is thrown
+
+// For const
+console.log(c)
+const c=12 // For same for both let and const
+```
+- Function declartion Hoisting 
+It is only possible for named function
+# Nov 3
+#  Currying function
+Uncurrying -> f(a,b,c) -> f=(a,b,c) -> abc means performing some operation <br>
+Currying  -> f(a)(b)(c) -> f=a=>b=>c  -> abc
+```js
+//Uncurrying function example -> Normal function
+function add(a,b,c){
+    console.log(a+b+c)
+}
+add(1,2,3) //op->6
+//Currying function
+function add(a){
+    return function(b){
+        return function(c){
+            console.log(a+b+c)
+        }
+    }
+}
+//chaining call
+add(10)(20)(30) // o/p-> 60
+let curry1=add(100)
+let curry2=curry1(200)
+curry2(300) // op ->600
+console.log(curry1) // o/p-> [Function (anonymous)]
+console.log(curry2) // o/p-> [Function (anonymous)]
+```
+# Module 28- Self Invoke Function 
+- IIFE(Immediately Invoked Function Expression)
+- That is the function is not called explicitly by anyone.For example the prepinsta page automatically shows the ad pop up page
+```js
+function NormalFun(){
+    console.log("Executed Whenever I called")
+}
+NormalFun();
+
+
+//IIFE - Immediately Invoked Function Expression
+// The Function is nothing but it is self invoked ,so the function must be anonymous ->Syntax (function(){}())
+(function(){
+    console.log("Self Invoked Function")
+}) ();
+//with parameter
+(function IIFepatern(username,phone){
+    console.log(`This is ${username} website and contact number is ${phone}`)
+})("Keerthivasan",7904479992)
+// We can also name this function but no use of it,because if we explicitly call it with function name(),it will throws an error
+//IIFepatern("Keerthivasan",2301282408) // ReferenceError:IIFepatern is not defined
+```
+- Closure Function 
+```js
+// Closure Function 
+// Accessing or using the outervarible from outerfunction from within the inner function 
+function outerfunction(){
+    let outervariable="I am from outer scope"
+    function innerfunction(){
+        console.log(outervariable)
+    }
+    return innerfunction ///returning as value not a function 
+}
+let innerfun=outerfunction() // storing the functions value in variable
+innerfun() //calling the innerfun variable as a function 
+```
+
+
+
+
 
 
